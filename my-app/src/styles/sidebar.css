@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-family: "Cairo", sans-serif;
+    font-weight: 600;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+
+
+a {
+    text-decoration: none;
+    width: 100%;
+    color: white;
+}
+
+a:visited {
+    font-weight: bold;
+}
+
+
+.SideBar {
+    color: white;
+    width: 250px;
+    background-color: #000814;
+    height: auto;
+    font-size: 2em;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+
+.SideBarUl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.SideBarLi {
+    cursor: pointer;
+    font-size: 0.7em;
+    padding: 15px 30px;
+    margin: 5px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.active {
+    background-color: #2e8c54;
+    border-radius: 10px;
+    /* width: 141px; */
+}
+
+.active::before {
+    content: "";
+    border-left: 10px solid #f3db2f;
+    position: absolute;
+    height: 70%;
+    left: 10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+
+.SideBarLi i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.SideBarLi:last-child::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 2px solid #ffffff20;
+    width: 80%;
+    bottom: -10px;
+    left: 5%;
+    top: 50%;
+}
+
+.SideBarLogOut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff20;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 0.8em;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.SideBarLogOut i {
+    margin: 8px;
+    font-size: 0.8em;
+}
+
+.SideBarLogOut div {
+    width: 100%;
+}
+
+
+@media only screen and (max-width:1400px) {
+    .MainSection {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-template-rows: repeat(13, minmax(252px, 1fr));
+    }
+
+    .MainContent {
+        height: fit-content;
+        display: block;
+        min-height: 100%;
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    .SideBar {
+        width: 100%;
+        font-size: clamp(1em, 3vw, 2.2em);
+
+    }
+
+    .logo {
+        padding: 10px 10px;
+        margin: 0;
+    }
+
+    .SideBarUl {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6em;
+        padding: 7px;
+    }
+
+    .SideBarLi {
+        margin: 0px 3vw;
+        font-size: 0.8em;
+        padding: 3px 5px;
+    }
+
+    .SideBarLi .SideBarIcon {
+        display: none;
+    }
+
+    .SideBarLi:last-child::after {
+        display: none;
+    }
+
+    .SideBarLogOut {
+        transform: translateX(250%);
+        top: 10px;
+        /* height: fit-content; */
+        padding: 0;
+        margin: 0;
+        /* left: 25px; */
+        /* color: red; */
+        background: red;
+        /* color: white; */
+    }
+
+    .SideBarLogOut div {
+        display: none;
+    }
+
+    .SideBarLi:first-child:before {
+        display: none;
+    }
+
+    .SideBarLi p {
+        padding: 5px 5px;
+    }
+
+    .nest {
+        display: block;
+    }
+
+    .CarModel img {
+
+        top: -11%;
+    }
+
+    th,
+    td {
+        padding: 5px 10px;
+    }
+
+    .card {
+        padding: 10px 0;
+        font-size: 0.8em;
+    }
+
+    .cardData {
+        margin-bottom: 10px;
+    }
+
+
+
+    .SquareContainer {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+
+    .TableLatestRents {
+        overflow: auto;
+        padding: 10px;
+    }
+
+    .TableNotif {
+        padding: 10px;
+    }
+
+    .active::before {
+        display: none;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        /* Allow horizontal scrolling */
+    }
+
+
+    .MainContent .container table th,
+    table td {
+        padding: 10px 7px;
+    }
+
+    .MainSection .container #RentTable {
+        font-size: 1em;
+    }
+
+    .CarPlace img {
+        max-width: 199%;
+    }
+
+
+}
+
+
+
+
+
+@media only screen and (max-width:778px) {
+
+
+    .SideBar {
+        width: 100%;
+        font-size: clamp(1em, 3vw, 2.2em);
+
+    }
+
+    .logo {
+        padding: 10px 10px;
+        margin: 0;
+    }
+
+    .SideBarUl {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6em;
+        padding: 7px;
+    }
+
+    .SideBarLi {
+        margin: 0px 3vw;
+        font-size: 0.8em;
+        padding: 3px 8px;
+    }
+
+    .SideBarLi .SideBarIcon {
+        display: none;
+    }
+
+    .SideBarLi:last-child::after {
+        display: none;
+    }
+
+    .SideBarLogOut {
+        transform: translateX(200%);
+        top: 10%;
+    }
+
+    .SideBarLogOut div {
+        display: none;
+    }
+
+    .SideBarLi:first-child:before {
+        display: none;
+    }
+
+    .SideBarLi p {
+        padding: 5px 5px;
+    }
+
+}
+
+
+
+@media only screen and (max-width:450px) {
+
+    .SideBarLi {
+
+        margin-right: 7px;
+
+    }
+
+    .SideBarLogOut {
+        transform: translateX(160%);
+        top: 10%;
+    }
+
+
+}
